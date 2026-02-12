@@ -14,13 +14,17 @@ public class Login_TC01 {
 		
 		System.out.println("Landed into login page");
 		
-		WebElement userName = logindriver.findElement(By.id("email"));
+		WebElement userName = logindriver.findElement(By.className("form-control"));
 		
 		userName.sendKeys("kiran@gmail.com");
+		
+		System.out.println("Email Entered");
 		
 		WebElement password = logindriver.findElement(By.id("password"));
 		
 		password.sendKeys("123456");
+		
+		System.out.println("Password Entered");
 		
 		WebElement submit = logindriver.findElement(By.xpath("//*[@id=\"form\"]/div[3]/div/button"));
 		
@@ -29,6 +33,8 @@ public class Login_TC01 {
 		WebElement logout = logindriver.findElement(By.xpath("/html/body/div/header/nav/div/ul/li/a"));
 		
 		logout.click();
+		
+		System.out.println("Logged Out Successfully");
 	}
 
 }
